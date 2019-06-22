@@ -172,7 +172,7 @@ def df_conj_x_y_expected(deep_learning = None):
 	return df, conj, x, y, what_is_expected, type_str, labelencoder_X_1
 
 def split_data(x, y, percent=percentage):
-	# x,y = SMOTE().fit_resample(x, y)
+	x,y = SMOTE().fit_resample(x, y)
 	x_train, x_test,y_train, y_test = train_test_split(x,y,test_size=percent)
 	return x_train, x_test,y_train, y_test
 
